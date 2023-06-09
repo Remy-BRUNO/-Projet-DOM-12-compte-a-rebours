@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* font-familly */
+  --bodyFont: "Open Sans", sans-serif;
+  --headingFont: "Roboto", sans-serif;
+
+  /* font size fluide responsive */
+  --font-size-small: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-p: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-h5: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-h4: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-h3: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-h2: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-h1: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+  /* couleurs */
+  --colorBlack: #222;
+  --colorWhite: #fff;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+
+  /* primary colors */
+  --fun-blue-50: hsl(213, 73%, 97%);
+  --fun-blue-100: hsl(213, 69%, 94%);
+  --fun-blue-200: hsl(209, 69%, 86%);
+  --fun-blue-300: hsl(208, 70%, 74%);
+  --fun-blue-400: hsl(207, 68%, 60%);
+  --fun-blue-500: hsl(207, 64%, 48%);
+  --fun-blue-600: hsl(209, 71%, 41%);
+  --fun-blue-700: hsl(209, 70%, 32%);
+  --fun-blue-800: hsl(209, 66%, 27%);
+  --fun-blue-900: hsl(211, 59%, 24%);
+  --fun-blue-950: hsl(213, 58%, 16%);
+
+  /* grey */
+  --grey-50: hsl(204, 26%, 96%);
+  --grey-100: hsl(207, 22%, 90%);
+  --grey-200: hsl(211, 23%, 82%);
+  --grey-300: hsl(208, 23%, 69%);
+  --grey-400: hsl(210, 22%, 49%);
+  --grey-500: hsl(211, 24%, 43%);
+  --grey-600: hsl(213, 23%, 36%);
+  --grey-700: hsl(216, 20%, 31%);
+  --grey-800: hsl(217, 17%, 27%);
+  --grey-900: hsl(218, 16%, 24%);
+  --grey-950: hsl(221, 21%, 15%);
+
+  /* rest of vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-950);
+  --border-radius: 0.5rem;
+  --letter-spacing: 0.1em;
+  --transition: all 0.3s ease-in-out;
+  --vew-width: 90vw;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+
+  /* box shadow */
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: var(--grey-50);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--textColor);
+}
+
+p {
+  font-size: var(--font-size-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: var(--headingFont);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+/** images */
+img {
+  display: block;
+  object-fit: cover;
+  width: var(--vew-width);
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.product {
+  display: grid;
+  place-items: center;
+  width: var(--vew-width);
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 900px;
+}
+.product-info {
+  max-width: 900px;
+}
+.product-title {
+  color: var(--fun-blue-600);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 0.75rem;
+}
+.product-offre {
+  letter-spacing: var(--letter-spacing);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.product-desc {
+  color: var(--fun-blue-300);
+}
+.product-counter {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.product-counter div {
+  background: var(--fun-blue-800);
+  color: var(--colorWhite);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+.counter {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 990px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: var(--max-width);
+  }
+  img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
